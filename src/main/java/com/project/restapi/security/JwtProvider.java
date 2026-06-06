@@ -21,10 +21,10 @@ import jakarta.annotation.PostConstruct;
 public class JwtProvider {
 
     @Value("${jwt.secret:}")
-    private String secret;
+    String secret;
 
     @Value("${jwt.expiration-hours:24}")
-    private long expirationHours;
+    long expirationHours;
 
     private SecretKey secretKey;
 

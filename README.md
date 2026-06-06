@@ -1,6 +1,6 @@
 # RestAPI
 
-[![Use this template](https://img.shields.io/badge/Use%20this%20template-2ea44f?style=flat-square)](https://github.com/<tu-org>/restapi/generate)
+[![Use this template](https://img.shields.io/badge/Use%20this%20template-2ea44f?style=flat-square)](https://github.com/Akc9912/restapi/generate)
 
 Template base para construir APIs REST con Spring Boot, JWT, y arquitectura modular.
 
@@ -34,21 +34,22 @@ psql -U postgres -d mi-proyecto -f script/database/00-init.sql
 
 ## Stack
 
-| Tecnología | Versión |
-|---|---|
-| Java | 21 |
-| Spring Boot | 3.3.x (LTS) |
-| Spring Security | 6.x |
-| Spring Data JPA | 3.x |
-| JWT (jjwt) | 0.12.6 |
-| OpenAPI / Swagger | springdoc 3.0.2 |
-| Base de datos | PostgreSQL (producción) / H2 (tests) |
-| Build | Maven 3.9+ |
-| Lombok | Última |
+| Tecnología        | Versión                              |
+| ----------------- | ------------------------------------ |
+| Java              | 21                                   |
+| Spring Boot       | 3.3.x (LTS)                          |
+| Spring Security   | 6.x                                  |
+| Spring Data JPA   | 3.x                                  |
+| JWT (jjwt)        | 0.12.6                               |
+| OpenAPI / Swagger | springdoc 3.0.2                      |
+| Base de datos     | PostgreSQL (producción) / H2 (tests) |
+| Build             | Maven 3.9+                           |
+| Lombok            | Última                               |
 
 ## Módulos
 
 ### Auth (`/api/auth/v1`)
+
 - `POST /register` — Registro de usuario
 - `POST /login` — Inicio de sesión
 - `POST /refresh` — Refrescar tokens
@@ -58,6 +59,7 @@ psql -U postgres -d mi-proyecto -f script/database/00-init.sql
 - `POST /password-reset/confirm` — Confirmar reseteo de contraseña
 
 ### Users (`/api/users/v1`)
+
 - `GET /me` — Usuario actual
 - `GET /{id}` — Usuario por ID
 - `GET /` — Listar usuarios
@@ -96,15 +98,15 @@ La API estará disponible en `http://localhost:8080` y Swagger en `http://localh
 
 ## Variables de Entorno
 
-| Variable | Default | Descripción |
-|---|---|---|
-| `DB_URL` | `jdbc:postgresql://localhost:5432/restapi` | URL de la base de datos |
-| `DB_USERNAME` | `postgres` | Usuario de base de datos |
-| `DB_PASSWORD` | `postgres` | Contraseña de base de datos |
-| `JWT_SECRET` | (valor por defecto para desarrollo) | Secreto para firmar JWT |
-| `JWT_EXPIRATION_HOURS` | `24` | Horas de expiración del token |
-| `CORS_ALLOWED_ORIGINS` | `http://localhost:5173,http://localhost:3000` | Orígenes permitidos |
-| `SERVER_PORT` | `8080` | Puerto del servidor |
+| Variable               | Default                                       | Descripción                   |
+| ---------------------- | --------------------------------------------- | ----------------------------- |
+| `DB_URL`               | `jdbc:postgresql://localhost:5432/restapi`    | URL de la base de datos       |
+| `DB_USERNAME`          | `postgres`                                    | Usuario de base de datos      |
+| `DB_PASSWORD`          | `postgres`                                    | Contraseña de base de datos   |
+| `JWT_SECRET`           | (valor por defecto para desarrollo)           | Secreto para firmar JWT       |
+| `JWT_EXPIRATION_HOURS` | `24`                                          | Horas de expiración del token |
+| `CORS_ALLOWED_ORIGINS` | `http://localhost:5173,http://localhost:3000` | Orígenes permitidos           |
+| `SERVER_PORT`          | `8080`                                        | Puerto del servidor           |
 
 ## Tests
 
